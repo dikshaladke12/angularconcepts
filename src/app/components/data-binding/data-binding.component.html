@@ -1,0 +1,61 @@
+<h3> data Binding </h3>
+<span>
+    <p>* one Way </p>
+    <p>
+        <span >1. from .ts to .html <br>
+            <span >*interpolation </span>&nbsp;
+            <span>*property Binding </span>
+        </span >
+
+    </p>
+    <p>
+        <span >2. from .html to .ts <br>
+            <span >*event Binding </span>
+        </span >
+
+    </p>
+</span>
+<hr>
+<span>
+    <p>* two Way </p>
+    <p>
+        <span >ngModel</span>
+    </p>
+</span>
+
+<hr><hr>
+<p><b> interpolation </b> </p>
+<p>name : {{ name }}, age: {{age}}</p>
+
+<hr>
+<p><b>property binding </b> </p>
+<div>
+    <input type=" text " [value]="name " placeholder="name ">
+</div>
+<div>
+    <span> checkbox invoked as a property binding:
+    <input [type]="myinputType" [value]=" name " placeholder="name ">
+    </span>
+</div>
+
+<div>
+    <b>Event Binding</b>
+    <button class="btn btn-primary" (click) = 'showMessage()'>click </button>
+    <div>
+        <select (change)="onStateChange($event)"> 
+            <option value ="">select State</option>
+            <option value ="Mh">Mh</option>
+            <option value ="gujrat">gujrat</option>
+            <option value ="MP">MP</option>
+            <option value ="UP">UP</option>
+            <option value ="jharkhand">jharkhand</option>
+        </select>
+    </div>
+</div>
+<hr>
+<div>
+    <p>Two way Data Binding</p>
+    <input type="text" [(ngModel)]='name1' placeholder="name1">
+
+    <p>Two way Data Binding::: {{name1}}</p>
+</div>
